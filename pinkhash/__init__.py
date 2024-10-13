@@ -3,29 +3,27 @@ import io
 import sys
 from typing import Any
 
-__version__ = '0.0.1'
-default_alphabet = 'rfc1751'
+__version__ = '0.0.2'
+default_language = 'rfc1751'
 
-
-
-from .alphabets import nato, rfc1751, eng1
-from .alphabet import alphabet_mgr, Alphabet
+from .languages import nato, rfc1751, eng1
+from .lang import language_mgr, Language
 
 
 class PinkHash():
     
-    alphabet: Alphabet = None
+    language: Language = None
     nbytes: int
     nwords: int
 
 
-    def __init__(self, alphabet_name: str=None, nbytes: int = 8, nwords: int | None = None, donothash=False):
+    def __init__(self, language_name: str=None, nbytes: int = 8, nwords: int | None = None, donothash=False):
         
         self.nbytes = nbytes
         # donothash - if data is already bytes of hash
         self.donothash = donothash
-        self.alphabet = alphabet_mgr.get_alphabet(alphabet_name or default_alphabet)
-        self.nwords = nwords or self.alphabet.def_nwords
+        self.language = language_mgr.get_language(language_name or default_language)
+        self.nwords = nwords or self.language.def_nwords
 
     def any2bytes(self, data: Any):
         # do not do anything if already bytes
@@ -59,7 +57,7 @@ class PinkHash():
         last_bytes = data[-self.nbytes:]
         number = int.from_bytes(last_bytes, byteorder='big')  
         
-        pinkhash = self.alphabet.convert(number = number)[:self.nwords]
+        pinkhash = self.language.convert(number = number)[:self.nwords]
         return ' '.join(pinkhash)
 
     def __repr__(self):

@@ -1,4 +1,4 @@
-from ..alphabet import Alphabet, alphabet_mgr
+from ..lang import Language, language_mgr
 
 rfc1751_alphabet = [
     "A", "ABE", "ACE", "ACT", "AD", "ADA", "ADD",
@@ -232,7 +232,7 @@ rfc1751_alphabet = [
 
 ]
 
-class RFC1751(Alphabet):
+class RFC1751(Language):
     name = 'rfc1751'
     def_nwords = 3
     description = "RFC1751 encoding (short english words)"
@@ -255,4 +255,4 @@ class RFC1751(Alphabet):
 
         return words
 
-alphabet_mgr.add('rfc1751', RFC1751())
+language_mgr.add('rfc1751', RFC1751())

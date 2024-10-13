@@ -8,20 +8,7 @@ Hashes are great for many machine-specific purposes, but if you give a hash to a
 
 However, humans aren’t entirely useless — they can remember vivid phrases quite well. If you tell someone not to think about a pink elephant or a white monkey, and then Margot Robbie calls to ask them out on a date, even after spending the entire evening and night with her, they’ll still be thinking about the pink elephant.
 
-`WELL LANE HELD` or `Uniform Xray November` is much easier for numan to remember.
-
-
-## Examples
-~~~shell
-$ echo -n pinkhash | md5sum
-8f776debaf8b5031643aa463ba5bf0dc  -
-
-$ echo -n pinkhash | pink -a nato
-Uniform Xray November
-
-$ echo -n pinkhash | pink
-WELL LANE HELD
-~~~
+`WELL LANE HELD` (rfc1751), `configurational candidate` (eng1) or `Uniform Xray November` (nato) is much easier for numan to remember.
 
 ## Installation
 
@@ -47,6 +34,12 @@ Hotel Yankee Zulu Papa Hotel
 # eng1 never returns more then 2 words
 $ pink -a eng1  < /tmp/1M 
 paraboloidal teapot
+
+# can hash files
+$ pink ~/*txt
+/home/xenon/cookies.txt: JOEL HESS DRAW
+/home/xenon/DNS.txt: NOAH BABY DIRE
+/home/xenon/log.txt: AID HERO LIE
 ~~~
 
 ## Python usage
@@ -68,3 +61,8 @@ r = pink.convert(data)
 print(r)
 ~~~
 
+## Languages
+Each method to convert hash into words in Pinkhash is called an *language*. For example, `nato` is one language and `rfc1751` is another language. Do not confuse this with national language. Pinkhash now has built-in `eng1` language (which produces adjective+noun pair from large set of english words) but there could be another *english* language, e.g. one which uses only simple popular words or one which produces poems or haiku.
+
+## Contributions
+Contributions are welcome! Write me to yaroslaff / gmail.com to discuss or make a ticket and/or PR.

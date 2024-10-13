@@ -2,7 +2,7 @@
 # wordnet/nltk dictionary
 #
 
-from ..alphabet import Alphabet, alphabet_mgr
+from ..lang import Language, language_mgr
 from pathlib import Path
 import os
 
@@ -10,7 +10,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 
-class Eng1(Alphabet):
+class Eng1(Language):
 
     name="eng1"
     description=f"wordnet-based english alphabet (adj+noun)"
@@ -42,7 +42,7 @@ class Eng1(Alphabet):
 
         return words
 
-alphabet_mgr.add(Eng1.name, Eng1())
+language_mgr.add(Eng1.name, Eng1())
 
 
 

@@ -2,7 +2,7 @@
 # Nato (ICAO) Alphabet
 #
 
-from ..alphabet import Alphabet, alphabet_mgr
+from ..lang import Language, language_mgr
 
 nato_alphabet = [
     'Alpha',
@@ -33,7 +33,7 @@ nato_alphabet = [
     'Zulu'
 ]
 
-class Nato(Alphabet):
+class Nato(Language):
 
     name="nato"
     description="NATO (ICAO) Phonetic Alphabet"
@@ -57,7 +57,7 @@ class Nato(Alphabet):
 
         return words
 
-alphabet_mgr.add(Nato.name, Nato())
+language_mgr.add(Nato.name, Nato())
 
 
 
