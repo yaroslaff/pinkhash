@@ -43,6 +43,10 @@ $ pink < /tmp/1M
 # get 5-words pink hash with NATO alphabet
 $ pink -a nato -w 5 < /tmp/1M 
 Hotel Yankee Zulu Papa Hotel
+
+# eng1 never returns more then 2 words
+$ pink -a eng1  < /tmp/1M 
+paraboloidal teapot
 ~~~
 
 ## Python usage
