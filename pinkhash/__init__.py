@@ -8,7 +8,7 @@ default_alphabet = 'rfc1751'
 
 
 
-from .alphabets import nato, rfc1751
+from .alphabets import nato, rfc1751, eng1
 from .alphabet import alphabet_mgr, Alphabet
 
 
