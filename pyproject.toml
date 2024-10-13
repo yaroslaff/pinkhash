@@ -1,0 +1,37 @@
+[build-system]
+# requires = ["setuptools >= 40.6.0", "wheel"]
+requires = ["hatchling", "wheel"]
+
+# build-backend = "setuptools.build_meta"
+build-backend = "hatchling.build"
+
+[project]
+name="pinkhash"
+dynamic = [ "version" ]
+keywords = [ "hash", "mnemonic", "convert", "words", "alphabet", "memorize", "pink", "elephant", "pinkelephant", "pinkhash", "NATO", "ICAO", "RFC1751" ]
+
+dependencies = [
+]
+authors = [
+  { name="Yaroslav Polyakov", email="yaroslaff@gmail.com" },
+]
+description = "Convert any hash/data into human-friendly phrase (numerous ways)"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography"
+]
+
+[project.urls]
+Homepage = "https://github.com/yaroslaff/pinkhash"
+Issues = "https://github.com/yaroslaff/pinkhash/issues"
+
+
+[project.scripts]
+pink = "pinkhash.main:main"
+
+[tool.hatch.version]
+path = 'pinkhash/__init__.py'
