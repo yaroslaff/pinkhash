@@ -8,14 +8,15 @@ build-backend = "hatchling.build"
 [project]
 name="pinkhash"
 dynamic = [ "version" ]
-keywords = [ "hash", "mnemonic", "convert", "words", "alphabet", "memorize", "pink", "elephant", "pinkelephant", "pinkhash", "NATO", "ICAO", "RFC1751" ]
+keywords = [ "hash", "mnemonic", "convert", "words", "memorize", "pink", "elephant", "pinkelephant", "pinkhash", 
+  "NATO", "ICAO", "RFC1751", "english" "natural", "natural language", "vivid" ]
 
 dependencies = [
 ]
 authors = [
   { name="Yaroslav Polyakov", email="yaroslaff@gmail.com" },
 ]
-description = "Convert any hash/data into human-friendly phrase (numerous ways)"
+description = "Convert any hash/data into human-friendly memorable phrase (numerous ways)"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [

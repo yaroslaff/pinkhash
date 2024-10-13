@@ -1,5 +1,5 @@
 
-# abstract class for any alphabet such as Nato
+# abstract class for any language such as Nato
 class Language():
     name = None
     description = "Abstract class for any languages"

@@ -13,7 +13,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 class Eng1(Language):
 
     name="eng1"
-    description=f"wordnet-based english alphabet (adj+noun)"
+    description=f"wordnet-based english language (adj+noun)"
     def_nwords=5
 
 

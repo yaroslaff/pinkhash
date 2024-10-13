@@ -14,7 +14,7 @@ def get_args():
     for lang in language_mgr.languages.values():
         parser.epilog += f'  {lang.name}: {lang.description}\n'
 
-    parser.add_argument('-l', '--lang', metavar='Languages', type=str, 
+    parser.add_argument('-l', '--lang', metavar='LANG', type=str, 
                         help=f'One of: {" ".join(language_mgr.languages.keys())}')
     parser.add_argument('-w', '--words', metavar='N_WORDS', type=int, default=3, help='Pink-hash lenght in words')
     parser.add_argument('FILE',  nargs='*', help='Files to hash')

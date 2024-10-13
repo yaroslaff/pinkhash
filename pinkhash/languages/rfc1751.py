@@ -235,7 +235,7 @@ rfc1751_alphabet = [
 class RFC1751(Language):
     name = 'rfc1751'
     def_nwords = 3
-    description = "RFC1751 encoding (short english words)"
+    description = "Language based on RFC1751 wordlist (short english words)"
 
     def __init__(self):
         pass

@@ -27,12 +27,12 @@ pip install pinkhash
 # get pink hash for any file as stdin stream
 $ pink < /tmp/1M
 
-# get 5-words pink hash with NATO alphabet
-$ pink -a nato -w 5 < /tmp/1M 
+# get 5-words pink hash with specific language: NATO/ICAO alphabet
+$ pink -l nato -w 5 < /tmp/1M 
 Hotel Yankee Zulu Papa Hotel
 
 # eng1 never returns more then 2 words
-$ pink -a eng1  < /tmp/1M 
+$ pink -l eng1  < /tmp/1M 
 paraboloidal teapot
 
 # can hash files
@@ -44,7 +44,7 @@ $ pink ~/*txt
 
 ## Python usage
 
-Get pinkhash for a `str` with all default settings (RFC1751 alphabet).
+Get pinkhash for a `str` with all default settings (RFC1751 language as default).
 ~~~python
 from pinkhash import PinkHash
 pink = PinkHash()
@@ -55,14 +55,16 @@ print(pink.convert('Hello world!'))
 from pinkhash import PinkHash
 import sys
 
-pink = PinkHash(alphabet_name='nato', nwords=3)
+pink = PinkHash(language_name='nato', nwords=3)
 data = sys.stdin.buffer.read()
 r = pink.convert(data)
 print(r)
 ~~~
 
 ## Languages
-Each method to convert hash into words in Pinkhash is called an *language*. For example, `nato` is one language and `rfc1751` is another language. Do not confuse this with national language. Pinkhash now has built-in `eng1` language (which produces adjective+noun pair from large set of english words) but there could be another *english* language, e.g. one which uses only simple popular words or one which produces poems or haiku.
+Each method to convert hash into words in Pinkhash is called an *language*. For example, `nato` is one language and `rfc1751` is another language. Do not confuse this with a national language. Pinkhash now has built-in `eng1` language (which produces adjective+noun pair from large set of english words) but there could be another *english* language, e.g. one which uses only simple popular words, or one which builds longer phrases or one which produces poems or haiku. 
+
+Usually (but not always) language can produce hashes of specified (`-w`) number of words, but `eng1` never produces more then 2 words.
 
 ## Contributions
 Contributions are welcome! Write me to yaroslaff / gmail.com to discuss or make a ticket and/or PR.
