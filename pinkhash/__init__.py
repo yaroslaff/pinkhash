@@ -1,9 +1,9 @@
 import hashlib
 import io
 import sys
-from typing import Any
+from typing import Any, Optional
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 default_language = 'rfc1751'
 
 from .languages import nato, rfc1751, eng1
@@ -17,7 +17,7 @@ class PinkHash():
     nwords: int
 
 
-    def __init__(self, language_name: str=None, nbytes: int = 8, nwords: int | None = None, donothash=False):
+    def __init__(self, language_name: str=None, nbytes: int = 8, nwords: Optional[int] = None, donothash=False):
         
         self.nbytes = nbytes
         # donothash - if data is already bytes of hash
