@@ -1,2 +1,9 @@
-# pink-elephant
-convert hashes to mnemonic phrases
+# Pink Hash
+
+*It's like an pink elephant, but hash*
+
+Convert hashes to mnemonic phrases
+
+~~~
+
+~~~
