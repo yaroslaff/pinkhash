@@ -12,7 +12,7 @@ from .alphabets import nato, rfc1751
 from .alphabet import alphabet_mgr, Alphabet
 
 
-class PinkElephant():
+class PinkHash():
     
     alphabet: Alphabet = None
     nbytes: int

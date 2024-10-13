@@ -2,12 +2,12 @@ import argparse
 import sys
 
 from . import __version__
-from . import PinkElephant
+from . import PinkHash
 from .alphabet import alphabet_mgr
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description=f'Pink Elephant version {__version__}. Convert data to memorable strings',
+        description=f'PinkHash version {__version__}. Convert data to memorable strings',
         formatter_class=argparse.RawTextHelpFormatter)
 
     parser.epilog = 'Available alphabets (-a) are:\n'
@@ -26,7 +26,7 @@ def get_args():
 def main():
     args = get_args()
 
-    pink = PinkElephant(alphabet_name=args.alphabet, nwords=args.words)
+    pink = PinkHash(alphabet_name=args.alphabet, nwords=args.words)
 
     data = sys.stdin.buffer.read()
 
