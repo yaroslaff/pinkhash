@@ -9,7 +9,7 @@ Hashes are great for many machine-specific purposes, but if you give a hash to a
 However, humans aren’t entirely useless — they can remember vivid phrases quite well. If you tell someone not to think about a pink elephant (or a white monkey), and then Margot Robbie calls to ask them out on a date, even after spending the entire evening and night with her, they’ll still be thinking about the pink elephant.
 
 If a hash is converted into words, people will remember it much better:
-- `alter print drive` *// bip39+en option by default, but we have `fr`, `es`, `pt`, `it`, `ko`, `cz`, `zh-hant` and `zh-hans` as well*
+- `alter print drive` *// bip39 with `en` option by default, but we have `fr`, `es`, `pt`, `it`, `ko`, `cz`, `zh-hant` and `zh-hans` as well*
 - `WELL LANE HELD` *// rfc1751*
 - `configurational candidate` *// eng1*
 - `Uniform X-ray November` *// nato*
