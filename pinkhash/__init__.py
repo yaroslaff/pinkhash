@@ -34,7 +34,6 @@ class PinkHash():
             hash_object = hashlib.sha1()
             hash_object.update(data)
             data = hash_object.digest()
-            # print(hash_object.hexdigest(), file=sys.stderr)
             return data
 
         # if anything else
@@ -56,8 +55,7 @@ class PinkHash():
     def convert(self, data: Any):
         data = self.any2bytes(data)
         last_bytes = data[-self.nbytes:]
-        number = int.from_bytes(last_bytes, byteorder='big')  
-        
+        number = int.from_bytes(last_bytes, byteorder='big')
         pinkhash = self.language.convert(number = number, option=self.option)[:self.nwords]
         return ' '.join(pinkhash)
 

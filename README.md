@@ -33,19 +33,22 @@ pip install pinkhash
 $ echo "Hello world!" | pink 
 alter print drive
 
-# get pink hash for any file as stdin stream
-$ pink < /tmp/1M
-spot slogan tomato
+# or in French...
+$ echo "Hello world!" | pink  -o fr
+agacer offrir déposer
 
-# get 5-words pink hash with specific language: NATO/ICAO alphabet
-$ pink -l nato -w 5 < /tmp/1M 
-Hotel Yankee Zulu Papa Hotel
+# Nato alphabet, 5 words
+$ echo "Hello world!" | pink  -l nato -w 5
+Lima Quebec Whiskey Xray Sierra
 
-# eng1 never returns more then 2 words
-$ pink -l eng1  < /tmp/1M 
-paraboloidal teapot
+# eng1 always returns 2 words, no matter how many we ask
+$ echo "Hello world!" | pink  -l eng1 -w 42
+peripatetic viola
+~~~
 
-# pink can hash many files as well
+How to get pinkhash for files:
+~~~shell
+# pink can hash many files
 $ pink *txt
 cookies.txt: pelican number item
 DNS.txt: shadow expire inhale
@@ -72,9 +75,16 @@ print(r)
 ~~~
 
 ## Languages
-Each method to convert hash into words in Pinkhash is called an *language*. For example, `nato` is one language and `rfc1751` is another language. Do not confuse this with a national language. Pinkhash now has built-in `eng1` language (which produces adjective+noun pair from large set of english words) but there could be another *english* language, e.g. one which uses only simple popular words, or one which builds longer phrases or one which produces poems or haiku. 
+Each method to convert hash into words in Pinkhash is called an *language*. For example, `nato` is one language and `rfc1751` is another language. Do not confuse this with a national language. Pinkhash now has built-in `eng1` language (which produces adjective+noun pair from large set of english words) but in future there could be another *english* language, e.g. one which uses only simple popular words, or one which builds longer phrases or one which produces poems or haiku. 
 
-Usually (but not always) language can produce hashes of specified (`-w`) number of words, but `eng1` never produces more then 2 words.
+Usually (but not always) language can produce hashes of specified (`-w`) number of words, but `eng1` never produces more then 2 words. Also pinkhash will not produce more words then needed to cover only lower 64bits of sha1 hash of input.
+
+`BIP-39` language (based on [BIP-0039](https://github.com/bitcoin/bips/tree/master/bip-0039)) has 10 *options* (wordlists), choose it with `-o`. See all options with `-h`/`--help`.
+
+## Disclaimer
+While pinkhash uses `RFC1751` and `BIP-0039`, it's not strictly following it! Pinkhash has it's own algorithms and just uses wordlists from these standards. Do not use pinkhash where you need strict standard compliance.
+
+Mnemonical pink hashes are NOT cryptographically strong.
 
 ## Contributions
 Contributions are welcome! Write me to yaroslaff / gmail.com to discuss or make a ticket and/or PR.
