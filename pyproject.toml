@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 [project]
 name="pinkhash"
 dynamic = [ "version" ]
-keywords = [ "hash", "mnemonic", "convert", "words", "memorize", "pink", "elephant", "pinkelephant", "pinkhash", "NATO", "ICAO", "RFC1751", "english", "natural", "natural language", "vivid" ]
+keywords = [ "hash", "mnemonic", "convert", "words", "memorize", "pink", "elephant", "pinkelephant", "pinkhash", "NATO", "ICAO", "RFC1751", "BIP39", "english", "natural", "natural language", "vivid" ]
 
 dependencies = [
 ]

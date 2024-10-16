@@ -16,6 +16,8 @@ def get_args():
 
     parser.add_argument('-l', '--lang', metavar='LANG', type=str, 
                         help=f'One of: {" ".join(language_mgr.languages.keys())}')
+    parser.add_argument('-o', '--option', metavar='OPTION', type=str, 
+                        help=f'Option of pinkhash language (for bip39)')
     parser.add_argument('-w', '--words', metavar='N_WORDS', type=int, default=3, help='Pink-hash lenght in words')
     parser.add_argument('FILE',  nargs='*', help='Files to hash')
 
@@ -27,7 +29,7 @@ def get_args():
 def main():
     args = get_args()
 
-    pink = PinkHash(language_name=args.lang, nwords=args.words)
+    pink = PinkHash(language_name=args.lang, option=args.option, nwords=args.words)
 
     if args.FILE:
         for path in args.FILE:

@@ -240,7 +240,7 @@ class RFC1751(Language):
     def __init__(self):
         pass
 
-    def convert(self, number: int):
+    def convert(self, number: int, option: str=None):
         words = list()
 
         sz = len(rfc1751_alphabet)

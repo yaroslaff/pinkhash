@@ -2,7 +2,7 @@
 # wordnet/nltk dictionary
 #
 
-from ..lang import Language, language_mgr
+from ...lang import Language, language_mgr
 from pathlib import Path
 import os
 
@@ -26,7 +26,7 @@ class Eng1(Language):
         self.adjectives = (Path(script_dir) / Path('eng1-adjective.txt')).read_text().splitlines()
 
 
-    def convert(self, number: int):
+    def convert(self, number: int, option: str=None):
         words = list()
 
         if self.nouns is None:
