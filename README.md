@@ -8,7 +8,12 @@ Hashes are great for many machine-specific purposes, but if you give a hash to a
 
 However, humans aren’t entirely useless — they can remember vivid phrases quite well. If you tell someone not to think about a pink elephant (or a white monkey), and then Margot Robbie calls to ask them out on a date, even after spending the entire evening and night with her, they’ll still be thinking about the pink elephant.
 
-Hashes converted to words like: `alter print drive` (`bip39`, `en` option, default), `affecter ortie système` (`bip39` but  now `fr`, we have: `en`, `fr`, `es`, `pt`, `it`, `ko`, `cz`, `zh-hant`, `zh-hans`) `WELL LANE HELD` (rfc1751), `configurational candidate` (eng1) or `Uniform Xray November` (nato) is much easier for human to remember.
+If a hash is converted into words, people will remember it much better:
+- *alter print drive* (`bip39`, `en` option by default, but we have `fr`, `es`, `pt`, `it`, `ko`, `cz`, `zh-hant` and `zh-hans` as well)
+- *WELL LANE HELD* (`rfc1751`)
+- *configurational candidate* (`eng1`)
+- *Uniform X-ray November* (`nato`)
+
 
 ## Installation
 
@@ -24,12 +29,13 @@ pip install pinkhash
 
 ## CLI Usage
 ~~~shell
-# get pink hash for stdin
+# get pink hash for stdin, default mode with bip39/en
 $ echo "Hello world!" | pink 
 alter print drive
 
 # get pink hash for any file as stdin stream
 $ pink < /tmp/1M
+spot slogan tomato
 
 # get 5-words pink hash with specific language: NATO/ICAO alphabet
 $ pink -l nato -w 5 < /tmp/1M 
@@ -41,9 +47,9 @@ paraboloidal teapot
 
 # pink can hash many files as well
 $ pink ~/*txt
-/home/xenon/cookies.txt: JOEL HESS DRAW
-/home/xenon/DNS.txt: NOAH BABY DIRE
-/home/xenon/log.txt: AID HERO LIE
+/home/xenon/cookies.txt: pelican number item
+/home/xenon/DNS.txt: shadow expire inhale
+/home/xenon/log.txt: absurd now caution
 ~~~
 
 ## Python usage
