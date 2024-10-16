@@ -46,10 +46,10 @@ $ pink -l eng1  < /tmp/1M
 paraboloidal teapot
 
 # pink can hash many files as well
-$ pink ~/*txt
-/home/xenon/cookies.txt: pelican number item
-/home/xenon/DNS.txt: shadow expire inhale
-/home/xenon/log.txt: absurd now caution
+$ pink *txt
+cookies.txt: pelican number item
+DNS.txt: shadow expire inhale
+log.txt: absurd now caution
 ~~~
 
 ## Python usage
