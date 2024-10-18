@@ -2,7 +2,7 @@ import hashlib
 import io
 from typing import Any, Optional
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
 default_language = 'bip39'
 
 from .languages import nato, rfc1751, eng1, bip39
@@ -38,7 +38,7 @@ class PinkHash():
         # if anything else
         if isinstance(data, str):
             # convert data to hash
-            hash_object = hashlib.sha256()
+            hash_object = hashlib.sha1()
             hash_object.update(data.encode('utf-8'))
             data = hash_object.digest()
             return data
