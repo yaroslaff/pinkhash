@@ -2,7 +2,9 @@
 
 *It's like a pink elephant, but a hash*
 
-Convert hashes to mnemonic phrases.
+Convert hashes to mnemonic phrases like `alter print drive` or `configurational candidate`.
+
+![Pink Elephant](https://raw.githubusercontent.com/yaroslaff/pinkhash/refs/heads/master/img/pinkelephant.webp)
 
 Hashes are great for many machine-specific purposes, but if you give a hash to a person (e.g., display it on a console), you're doing something wrong. Humans struggle with remembering, comparing, or typing hashes accurately. For most people, `8f776debaf8b5031643aa463ba5bf0dc` and `8f776debaf8b5013643aa463ba5bf0dc` look essentially the same.
 
