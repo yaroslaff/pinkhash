@@ -1,14 +1,13 @@
 import hashlib
 import io
-import sys
 from typing import Any, Optional
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 default_language = 'bip39'
 
 from .languages import nato, rfc1751, eng1, bip39
 from .lang import language_mgr, Language
-
+from .exception import PinkHashError
 
 class PinkHash():
     

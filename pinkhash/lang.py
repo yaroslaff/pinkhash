@@ -1,3 +1,4 @@
+from .exception import PinkHashError
 
 # abstract class for any language such as Nato
 class Language():
@@ -20,7 +21,10 @@ class LanguageManager():
         return f'Language Manager({self.languages.keys()})'
     
     def get_language(self, name: str):
-        return self.languages[name]
+        try:
+            return self.languages[name]
+        except KeyError:
+            raise PinkHashError(f'Language {name} not found')
 
 
 language_mgr = LanguageManager()

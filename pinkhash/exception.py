@@ -1,0 +1,2 @@
+class PinkHashError(Exception):
+    pass

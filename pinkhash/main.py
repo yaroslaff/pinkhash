@@ -2,7 +2,7 @@ import argparse
 import sys
 
 from . import __version__
-from . import PinkHash
+from . import PinkHash, PinkHashError
 from .lang import language_mgr
 
 def get_args():
@@ -29,7 +29,11 @@ def get_args():
 def main():
     args = get_args()
 
-    pink = PinkHash(language_name=args.lang, option=args.option, nwords=args.words)
+    try:
+        pink = PinkHash(language_name=args.lang, option=args.option, nwords=args.words)
+    except PinkHashError as e:
+        print(e, file=sys.stderr)
+        sys.exit(1)
 
     if args.FILE:
         for path in args.FILE:
