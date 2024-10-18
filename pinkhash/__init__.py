@@ -2,7 +2,7 @@ import hashlib
 import io
 from typing import Any, Optional
 
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 default_language = 'bip39'
 
 from .languages import nato, rfc1751, eng1, bip39
@@ -54,7 +54,7 @@ class PinkHash():
     def convert(self, data: Any):
         data = self.any2bytes(data)
         last_bytes = data[-self.nbytes:]
-        number = int.from_bytes(last_bytes, byteorder='big')
+        number = int.from_bytes(last_bytes, byteorder='little')
         pinkhash = self.language.convert(number = number, option=self.option)[:self.nwords]
         return ' '.join(pinkhash)
 

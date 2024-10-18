@@ -31,19 +31,19 @@ pip install pinkhash
 ~~~shell
 # get pink hash for stdin, default mode with bip39/en
 $ echo "Hello world!" | pink 
-alter print drive
+hybrid interest chimney
 
 # or in French...
 $ echo "Hello world!" | pink  -o fr
-agacer offrir déposer
+gazelle griffure caméra
 
 # Nato alphabet, 5 words
 $ echo "Hello world!" | pink  -l nato -w 5
-Lima Quebec Whiskey Xray Sierra
+Charlie Zulu Tango Juliett Oscar
 
 # eng1 always returns 2 words, no matter how many we ask
 $ echo "Hello world!" | pink  -l eng1 -w 42
-peripatetic viola
+chief clioquinol
 ~~~
 
 How to get pinkhash for files:
