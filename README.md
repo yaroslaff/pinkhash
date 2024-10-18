@@ -57,13 +57,14 @@ log.txt: absurd now caution
 
 ## Python usage
 
-Get pinkhash for a `str` with all default settings (Bip39 language as default).
+Get pinkhash for a `str` with all default settings (Bip39 language as default):
 ~~~python
 from pinkhash import PinkHash
 pink = PinkHash()
 print(pink.convert('Hello world!'))
 ~~~
 
+Get pinkhash for stdin:
 ~~~python
 from pinkhash import PinkHash
 import sys
